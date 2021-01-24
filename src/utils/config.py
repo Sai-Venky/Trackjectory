@@ -5,12 +5,12 @@ class Config:
     gpus = '-1'
     num_workers = 0
     print_freq = 1
-    save_dir = 'Sow_P2/output/'
+    save_dir = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trackjectory/output'
 
     # Multi Tracker
     images_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/SOWp2/BDL_FairMOT/tanks/'
     labels_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/SOWp2/BDL_FairMOT/tanks/'
-    test_images_dataset = 'Sow_P2/tanks_test/'
+    test_images_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trackjectory/data/kabadi'
     load_model = '/Users/ecom-v.ramesh/Desktop/fairmot_dla34.pth'
     lr = 1.25e-4
     lr_step = [90, 120]

@@ -136,15 +136,15 @@ def vis(obs, pred, tgt, image):
         # for j in range(len(k)):
         #     image = cv2.circle(image, (int(k[j][1]), int(k[j][0])), radius=2, color= colors, thickness=2)
     
-    colors = (0, 0, 255)
-    for i in range(len(obs)):
-        for j in range(len(obs[i])):
-            image = cv2.circle(image, (int(obs[i][j][1]), int(obs[i][j][0])), radius=2, color= colors, thickness=2)
+    # colors = (0, 0, 255)
+    # for i in range(len(obs)):
+    #     for j in range(len(obs[i])):
+    #         image = cv2.circle(image, (int(obs[i][j][1]), int(obs[i][j][0])), radius=2, color= colors, thickness=2)
  
-    colors = (0, 255, 0)
-    for i in range(len(tgt)):
-        for j in range(len(tgt[i])):
-            image = cv2.circle(image, (int(tgt[i][j][1]), int(tgt[i][j][0])), radius=2, color= colors, thickness=2)
+    # colors = (0, 255, 0)
+    # for i in range(len(tgt)):
+    #     for j in range(len(tgt[i])):
+    #         image = cv2.circle(image, (int(tgt[i][j][1]), int(tgt[i][j][0])), radius=2, color= colors, thickness=2)
 
     return image
 
@@ -188,11 +188,11 @@ def vis_change(trajs_indexeds, image):
         heatmap_img_masked = cv2.bitwise_and(heatmap_img,heatmap_img, mask=mask)
         frame_data = cv2.addWeighted(frame_data, 1.0, heatmap_img_masked, 1.0, 0)
         # plot the predicted trajectory
-        for y, x in trajs_indexed[:max_gt_pred_length]:
-            frame_data = cv2.circle(frame_data, (int(x), int(y)), radius=5,
-                                    color=(255, 0, 0), thickness=1)
-        frame_data = plot_traj(frame_data, trajs_indexed[:max_gt_pred_length],
-                                (255, 0, 0))
+        # for y, x in trajs_indexed[:max_gt_pred_length]:
+        #     frame_data = cv2.circle(frame_data, (int(x), int(y)), radius=5,
+        #                             color=(255, 0, 0), thickness=1)
+        # frame_data = plot_traj(frame_data, trajs_indexed[:max_gt_pred_length],
+        #                         (255, 0, 0))
     return frame_data
 
 def nodes_rel_to_nodes_abs(nodes,init_node):

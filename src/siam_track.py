@@ -16,8 +16,8 @@ def eval_seq(opt, save_dir='/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trac
     net.eval()#.cuda()
 
     # image and init box
-    image_files = sorted(glob.glob('/Users/ecom-v.ramesh/Desktop/kabadi/frames/test/*.png'))
-    init_rbox = [698, 141, 876, 141, 698, 554, 876, 554]
+    image_files = sorted(glob.glob('/Users/ecom-v.ramesh/Desktop/kabadi/frames/frames2/*.png'))
+    init_rbox = [695, 250, 885, 250, 695, 570, 885, 570]
     [cx, cy, w, h] = get_axis_aligned_bbox(init_rbox)
 
     # tracker init
@@ -37,8 +37,7 @@ def eval_seq(opt, save_dir='/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trac
         res = [int(l) for l in res]
         # print(res)
         cv2.rectangle(im, (res[0], res[1]), (res[0] + res[2], res[1] + res[3]), (0, 255, 255), 3)
-        cv2.imshow('SiamRPN', im)
-        cv2.waitKey(1)
+        cv2.imwrite('/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trackjectory/output2/siam/'+ str(f) + '.png', im)
 
     print('Tracking Speed {:.1f}fps'.format((len(image_files)-1)/(toc/cv2.getTickFrequency())))
 
