@@ -1,0 +1,9 @@
+setup.py
+/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Sow_P2/BDL_FairMOT/DCNV2/src/vision.cpp
+/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Sow_P2/BDL_FairMOT/DCNV2/src/cpu/dcn_v2_cpu.cpp
+/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Sow_P2/BDL_FairMOT/DCNV2/src/cpu/dcn_v2_im2col_cpu.cpp
+/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Sow_P2/BDL_FairMOT/DCNV2/src/cpu/dcn_v2_psroi_pooling_cpu.cpp
+DCNv2.egg-info/PKG-INFO
+DCNv2.egg-info/SOURCES.txt
+DCNv2.egg-info/dependency_links.txt
+DCNv2.egg-info/top_level.txt
