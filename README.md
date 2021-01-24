@@ -8,9 +8,9 @@ Tracking and Trajectory Prediction
 3. Run `pip install lap cython-bbox`
 3. Setup DCNv2 by going into `cd DCNV2` and running `sh ./make.sh`.
 
-Outputs
+# Outputs
 
-![Multi Tracking Output](out/track.gif)
-![Trajectory Forcasting Output](out/traj.gif)
-![Single Object Tracking Output](out/sot.png)
-![Single Object Tracking Template](out/sot_template.png)
+Multi Object Tracking Output  ![Multi Object Tracking Output](out/track.gif)
+Trajectory Forcasting Output  ![Trajectory Forcasting Output](out/traj.gif)
+Single Object Tracking Output  ![Single Object Tracking Output](out/sot.png)
+Single Object Tracking Template  ![Single Object Tracking Template](out/sot_template.png)
