@@ -10,7 +10,12 @@ Tracking and Trajectory Prediction
 
 # Outputs
 
-Multi Object Tracking Output  ![Multi Object Tracking Output](out/track.gif)
-Trajectory Forcasting Output  ![Trajectory Forcasting Output](out/traj.gif)
-Single Object Tracking Output  ![Single Object Tracking Output](out/sot.png)
-Single Object Tracking Template  ![Single Object Tracking Template](out/sot_template.png)
+**Multi Object Tracking Output**<br/>
+![Multi Object Tracking Output](out/track.gif)
+
+**Trajectory Forcasting Output**<br/>
+![Trajectory Forcasting Output](out/traj.gif)
+
+**Single Object Tracking Output**<br/>
+
+<img src="out/sot.png" width="635" height="350" alt="Single Object Tracking Output ">&nbsp;&nbsp;<img src="out/sot_template.png" width="110" height="170" alt="Single Object Tracking Template">
