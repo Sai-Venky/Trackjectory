@@ -23,7 +23,6 @@ The code is straightforward and easy to follow.
 
 ### Installation and Running
 
-# Installation
 1. Run following to clone into local system `https://github.com/Sai-Venky/Trackjectory.git`.
 1. Create conda environment `conda create --name track python=3.6` and activate it `conda activate track`.
 2. Run `pip install -r requirements.txt`.
@@ -33,11 +32,9 @@ The code is straightforward and easy to follow.
 
 ### Dataset
 
-The dataset can be downloaded from the following links :-
+The dataset is created from Kabaddi players videos curated from multiple platforms.
+This was selected since this sport depicts a lot of movements (feints) and is challenging for forcasting trajectory correctly.
 
-`http://sintel.is.tue.mpg.de/`
-
-The dataset can be extracted and stored in the parent directory. If not, its location can be changed in `src/utils/config.py` at `dataset_dir`
 
 ### Directory Layout
 
@@ -66,9 +63,10 @@ The directory structure is as follows :-
 
  ### Acknowledgement
 
-https://github.com/ifzhang/FairMOT
-https://github.com/zllrunning/SiameseX.PyTorch
-https://github.com/abduallahmohamed/Social-STGCNN
+https://github.com/ifzhang/FairMOT<br>
+https://github.com/zllrunning/SiameseX.PyTorch<br>
+https://github.com/abduallahmohamed/Social-STGCNN<br>
+
  ### Contributing
 
  You can contribute in serveral ways such as creating new features, improving documentation etc.
