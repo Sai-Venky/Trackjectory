@@ -2,7 +2,7 @@
 ## Tracking and Trajectory Prediction 
 This is a research project to understand :-
 1. Siamese Tracker for online visual tracking.
-2. FairMOT for multi-object detection and tracking. (https://medium.com/analytics-vidhya/fairmot-multi-object-tracking-386afe930b24)
+2. FairMOT for multi-object detection and tracking. (<a href="https://medium.com/analytics-vidhya/fairmot-multi-object-tracking-386afe930b24">FairMOT: Multi-Object Tracking</a>)
 3. Social GCN for trajectory forcasting.
 <br>
 [1] is implemented to identify and track the template images provided as input across the frames. Its a single object tracking mechanism.<br>
