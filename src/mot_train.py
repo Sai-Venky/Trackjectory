@@ -141,8 +141,8 @@ def main(**kwargs):
     trainer = BaseTrainer(opt, model, optimizer)
     trainer.set_device(opt.gpus, -1, opt.device)
 
-    if opt.load_model != '':
-      model, optimizer = load_model(model, opt.load_model, trainer.optimizer)
+    if opt.multi_load_model != '':
+      model, optimizer = load_model(model, opt.multi_load_model, trainer.optimizer)
 
     best = 1e10
     for epoch in range(start_epoch + 1, opt.num_epochs + 1):

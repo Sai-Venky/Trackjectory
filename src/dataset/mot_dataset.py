@@ -101,8 +101,8 @@ class MotDataset:  # for training
 
         self.num_classes = 1
         self.fr = 1
-        self.img_files = sorted(glob.glob('%s/*/*/*.png' % opt.images_dataset))
-        self.label_files = sorted(glob.glob('%s/*/*/*.txt' % opt.labels_dataset))
+        self.img_files = sorted(glob.glob('%s/*/*/*.png' % opt.multi_images_dataset))
+        self.label_files = sorted(glob.glob('%s/*/*/*.txt' % opt.multi_labels_dataset))
 
         self.nID = int(1 + 1) # fot no
         self.nF = len(self.label_files)

@@ -8,10 +8,10 @@ class Config:
     save_dir = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trackjectory/output'
 
     # Multi Tracker
-    images_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/SOWp2/BDL_FairMOT/tanks/'
-    labels_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/SOWp2/BDL_FairMOT/tanks/'
-    test_images_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trackjectory/data/kabadi'
-    load_model = '/Users/ecom-v.ramesh/Desktop/fairmot_dla34.pth'
+    multi_images_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/SOWp2/BDL_FairMOT/tanks/'
+    multi_labels_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/SOWp2/BDL_FairMOT/tanks/'
+    multi_test_images_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trackjectory/data/kabadi'
+    multi_load_model = '/Users/ecom-v.ramesh/Desktop/fairmot_dla34.pth'
     lr = 1.25e-4
     lr_step = [90, 120]
     num_epochs = 3
@@ -27,7 +27,7 @@ class Config:
     conf_thres = 0.2
     
     # Single Tracker
-    single_track = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trackjectory/data/vot2018.txt'
+    single_track_dataset = '/Users/ecom-v.ramesh/Documents/Personal/2020/DL/Trackjectory/data/vot2018.txt'
     single_track_batch_size = 10
     single_track_load_model = '/Users/ecom-v.ramesh/Desktop/SiamRPNPPRes50.pth'
     single_track_start_epoch = 0

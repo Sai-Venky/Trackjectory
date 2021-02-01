@@ -29,7 +29,7 @@ def main(**kwargs):
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpus
     torch.cuda.manual_seed(317)
 
-    with open(args.single_track, 'r') as outfile:
+    with open(args.single_track_dataset, 'r') as outfile:
         args.single_track_data = json.load(outfile)
 
     model = SiamRPNPP()

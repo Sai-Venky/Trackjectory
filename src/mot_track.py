@@ -24,7 +24,7 @@ from utils.config import opt as options
 """
 def eval_seq(opt, save_dir='', frame_rate=30):
     
-    dataloader = LoadImages(opt.test_images_dataset)
+    dataloader = LoadImages(opt.multi_test_images_dataset)
     opt = opt.update_dataset_info_and_set_heads(opt, dataloader)
     tracker = JDETracker(opt, frame_rate=frame_rate)
     timer = Timer()
