@@ -2,7 +2,7 @@
 ## Tracking and Trajectory Prediction 
 
 Components Implemented :-
-1. Siamese Tracker for single object online visual tracking. This identify's and track's the template image provided as input across the video frames.<br>
+1. Siamese Tracker for single object (online) visual tracking. Provided the template image, SiamRPN++ identify's and track's the template across video frames.<br>
 2. FairMOT for one shot multi-object detection and tracking. (<a href="https://medium.com/analytics-vidhya/fairmot-multi-object-tracking-386afe930b24">FairMOT: Multi-Object Tracking</a>)
 3. Social GCN for trajectory forecasting. FairMOT is used to predict and track multiple objects across frames. After extracting the tracked objects, those outputs are furnished to Social GCN to forecast the trajectories.
 
@@ -19,16 +19,21 @@ Components Implemented :-
 
 ### Installation and Running
 
+#### Installation
+
 1. Run following to clone into local system `https://github.com/Sai-Venky/Trackjectory.git`.
 1. Create conda environment `conda create --name track python=3.6` and activate it `conda activate track`.
 2. Run `pip install -r requirements.txt`.
 3. Run `pip install lap cython-bbox`
 3. Setup DCNv2 by going into `cd DCNV2` and running `sh ./make.sh`.
 
-#### Training and Testing
+#### Running - Training and Testing
 
 All configurable values with details on their significance are in `utils/config.py`.
-
+For testing pre-trained models can be downloaded from <br>
+<a href="https://drive.google.com/file/d/1BV86AAjYMn50T1RfE8BkKkThlNZI1a-m/view">Siam RPN++</a> <br>
+<a href="https://drive.google.com/file/d/1iqRQjsG9BawIl8SlFomMg5iwkb6nqSpi/view">FairMOT DLA-34</a> <br>
+ 
 **Single Object Tracking** :- <br>
   Training - `python src/siam_train.py`<br>
   Testing - `python src/siam_track.py`<br><br>
@@ -44,7 +49,7 @@ All configurable values with details on their significance are in `utils/config.
 The dataset is created from Kabaddi player videos curated from multiple online platforms. (https://youtu.be/HOfY9g05Sv4)
 This was selected since this sport depicts a lot of movements (feints) and is challenging for forcasting trajectory correctly.
 
-In order to train with custom dataset, change the config value of `images_dataset`, `single_track`, `trajectory_dataset` in `utils/config.py`
+In order to train with a custom dataset, change the config value of `multi_images_dataset`, `single_track_dataset`, `trajectory_dataset` in `utils/config.py`
 
 ### Directory Layout
 
@@ -94,6 +99,8 @@ The directory structure is as follows :-
 
  ### Acknowledgement
 
+Thanks a lot for the wonderful work.
+The above pre-trained models are taken from the respective links and a large section of the code is adapted from these.
 https://github.com/ifzhang/FairMOT<br>
 https://github.com/zllrunning/SiameseX.PyTorch<br>
 https://github.com/abduallahmohamed/Social-STGCNN<br>
