@@ -1,7 +1,7 @@
-# Trackjectory
+# TrackJectory
 ## Tracking and Trajectory Prediction 
 
-Components Implemented
+Components Implemented :-
 1. Siamese Tracker for online visual tracking.
 2. FairMOT for multi-object detection and tracking. (<a href="https://medium.com/analytics-vidhya/fairmot-multi-object-tracking-386afe930b24">FairMOT: Multi-Object Tracking</a>)
 3. Social GCN for trajectory forcasting.
@@ -40,16 +40,37 @@ This was selected since this sport depicts a lot of movements (feints) and is ch
 
 The directory structure is as follows :-
 
-* **data :** contains the necessary files needed for loading the MPI Sintel dataset along with transformation functions.
-  * dataset : base class which instantiates the mpi sintel dataset and transforms the raw data.
-  * util : helper functions for preprocessing the image, flows
-  * mpi_sintel : contains class needed to process/parse the mpi dataset data
-* **models :** this contains the optical flow models and all of its constituent methods.
-    * optical_flow : core model with train, validate functions. Instantiates and Calls all other models (flownet, loss).
-    * flow_net2SD : contains the flow net SD model
-    * loss : contains the loss functions used by model
+* **dataset :** contains the necessary files needed for loading the Siamese, MOT and Trajectory forcasting dataset along with transformation functions.
+  * mot_dataset : training/validation and testing base class which instantiates the fairmot dataset and transforms the raw data with affine transformation.
+  * siam_dataset : training/validation base class which instantiates the siamese dataset and returns the template with target frame.
+  * trajectory_dataset : training/validation base class which instantiates the trajectory dataset with utlities for constructing graph based on sequences.
+  * util : helper functions for preprocessing the image.
+* **models :** this contains the base models for the 3 tasks with all of its constituent methods.
+    * gcn : contains the social graph cnn model with time extrapolator cnn.
+    * pose_dla_dcn : contains the dla-34 model with deformable convolutions initialization.
+    * single_track : contains the siam rpn++ model (resnet) with depthwise correlation.
+    * loss : contains the mot, bivariate and L1 loss functions.
 * **utils :** this contains the utility methods needed.
-    * config : contains the configuration/options.
+    * config : contains the configuration options.
+    * scheduler : contains the scheduler options for learning rate.
+    * utils : contains the load, save model functions.
+    * decode : contains the util functions for mot inference.
+* **tracker :** this contains the tracker instantiations for performing live inference.
+    * basetrack : the base class for mot tracking.
+    * matching : contains the methods needed for fusing motion with iou, embedding and kalman filter outputs.
+    * multitracker : implementation of JDE tracker for performing mot inference.
+    * singletracker : implementation of SiamRPN++ tracker for performing sot inference.
+* **tracking_utils :** this contains the utils needed for the mot tracker.
+    * kalman_filter : contains the methods for predicting, updating KF values and computing gating distance between KF outputs and emedding distance.
+    * log : logger function.
+    * timer : timer function.
+    * visualization : methods for visualizing the mot outputs.
+* mot_track : main file performing tasks for tracking mot objects and creating the inputs for trajectory forcasting.
+* mot_train : main file performing tasks for training fairMOT.
+* sot_track : main file performing tasks for tracking sot objects.
+* sot_train : main file performing tasks for training SiamRPN++.
+* trajectory_test : main file performing tasks for testing Social GCN and visualization functions for forming the trajectories.
+* trajectory_train : main file performing tasks for training Social GCN with outputs predicted from mot_track.
 
  ### Results
 #### Multi Object Tracking
