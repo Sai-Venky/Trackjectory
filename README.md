@@ -30,7 +30,7 @@ Components Implemented :-
 #### Running - Training and Testing
 
 All configurable values with details on their significance are in `utils/config.py`.
-For testing pre-trained models can be downloaded from <br>
+For testing, pre-trained models can be downloaded from <br>
 <a href="https://drive.google.com/file/d/1BV86AAjYMn50T1RfE8BkKkThlNZI1a-m/view">Siam RPN++</a> <br>
 <a href="https://drive.google.com/file/d/1iqRQjsG9BawIl8SlFomMg5iwkb6nqSpi/view">FairMOT DLA-34</a> <br>
  
@@ -49,7 +49,8 @@ For testing pre-trained models can be downloaded from <br>
 The dataset is created from Kabaddi player videos curated from multiple online platforms. (https://youtu.be/HOfY9g05Sv4)
 This was selected since this sport depicts a lot of movements (feints) and is challenging for forcasting trajectory correctly.
 
-In order to train with a custom dataset, change the config value of `multi_images_dataset`, `single_track_dataset`, `trajectory_dataset` in `utils/config.py`
+In order to train with a custom dataset, change the config value of `multi_images_dataset`, `single_track_dataset`, `trajectory_dataset` in `utils/config.py`.
+The samples of how data should be constructed is provided in the `data` folder.
 
 ### Directory Layout
 
