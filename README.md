@@ -101,7 +101,7 @@ The directory structure is as follows :-
  ### Acknowledgement
 
 Thanks a lot for the wonderful work.
-The above pre-trained models are taken from the respective links and a large section of the code is adapted from these.
+The above pre-trained models are taken from the respective links.
 
 https://github.com/ifzhang/FairMOT<br>
 https://github.com/zllrunning/SiameseX.PyTorch<br>
